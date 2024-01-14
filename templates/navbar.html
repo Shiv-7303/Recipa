@@ -1,0 +1,64 @@
+<nav class="navbar ">
+
+    <div class="flex justify-between items-center">
+        <a href="/" class="w-40">
+            <img src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo-p-500.png"
+                alt>
+        </a>
+
+        <div style="font-family: Inter, sans-serif;" class="md:flex hidden space-x-10 text-[17px] font-semibold ">
+            <a href="/" style="text-underline-offset: 12px;"
+                class="cursor-pointer hover:text-[#00693D] text-[#00693D] underline ">Home</a>
+            <a href="#about" class="cursor-pointer hover:text-[#00693D] ">About
+                Me</a>
+            <a href="/recipe" class="cursor-pointer hover:text-[#00693D] ">Recipes</a>
+        </div>
+        <a href="/contact"
+            class="group hidden sm:flex cursor-pointer rounded-md border-[2px] px-5 py-[12px] border-[#00693D] hover:bg-[#00693D]  duration-300 hover:ease-in-out transition-all">
+            <div style="font-family: Inter, sans-serif; font-weight: 600;" class=" flex gap-3 group-hover:text-white">
+                Contact Us
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 ease-in-out group-hover:transition-all group-hover:scale-110 group-hover:translate-x-[6px] group-hover:text-[#194130]">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                </svg>
+
+            </div>
+        </a>
+
+        <div id="menuToggle" data-collapse-toggle="navbar-default" type="button" class="md:hidden ">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+
+        </div>
+        <div class="hidden w-full sm:w-auto" id="navbar-default">
+            <ul
+                class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <li>
+                    <a href="#"
+                        class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                        aria-current="page">Home</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</nav>

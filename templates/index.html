@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<!-- bg-[#00693D] -->
+<!-- style="font-family: Inter, sans-serif;" -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{url_for('static',filename='css/output.css')}}" rel="stylesheet">
+
+    <title>Recipa-Home</title>
+</head>
+<style></style>
+
+<body>
+
+    <div class="page px-3  sm:px-6 py-6 ">
+        {% include 'navbar.html' %}
+        <div class="group hero sm:flex sm:flex-row mt-[2rem] sm:mt-16 items-center flex flex-col-reverse">
+
+            <div class="text flex flex-col">
+                <div class="flex mb-8 space-x-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#00693D" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="[#00693D]" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                    </svg>
+                    <img class="absolute w-[78px] duration-150 group-hover:skew-x-12 group-hover:rotate-12 sm:translate-y-[0.5rem] sm:-translate-x-[4.5rem]"
+                        src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502d5f0b00853ae07a0b3ac_sedi.png"
+                        alt>
+
+                    <img class="absolute w-[48px] duration-150 group-hover:skew-x-12 group-hover:rotate-12 sm:translate-y-[-2.5rem] sm:translate-x-[56.5rem] translate-y-[1.5rem] translate-x-[13.5rem]"
+                        src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502d532056aa512d4962996_tomato-p-500.png"
+                        alt>
+
+                    <img class="absolute w-[48px] duration-150 group-hover:skew-x-12 group-hover:rotate-12 sm:translate-y-[7.5rem] sm:translate-x-[66.5rem] translate-y-[14.5rem] translate-x-[11.5rem]"
+                        src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502d4c03a8bef604cc4e129_leaf-p-500.png"
+                        alt>
+
+                    <img class="absolute md:w-[90px] w-[78px] duration-150 group-hover:skew-x-12 group-hover:rotate-12 sm:translate-y-[24.5rem] sm:translate-x-[-2.5rem] translate-y-[19.5rem] translate-x-[-1.5rem]"
+                        src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502d44bdd3676099ceae02f_carrot-p-500.png"
+                        alt>
+
+                    <img class="absolute w-[78px] duration-150 group-hover:skew-x-12 group-hover:rotate-12 sm:translate-y-[23.5rem] sm:translate-x-[66.5rem] translate-y-[-16.5rem] translate-x-[-1.5rem]"
+                        src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502d400ab92f76e0bf8af7d_brocoli.png"
+                        alt>
+
+                    <p class="font-medium text-[#00693D]"> Welcome to
+                        Recipa</p>
+                </div>
+                <div>
+                    <img class="absolute w-[78px] duration-150 group-hover:skew-x-12 group-hover:rotate-12 sm:translate-y-[-2.5rem] sm:translate-x-[26.5rem] translate-y-[-18.5rem] translate-x-[13.5rem]"
+                        src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502d5937f0bdf649171f4e6_chees-p-500.png"
+                        alt>
+
+                    <p style="font-family: Inter, sans-serif;" class="font-semibold md:text-[45px] text-[24px]">
+                        Let's indulge in the nourishment of this <span class="text-[#00693D] flex"> wholesome
+                            meal.<img class="w-8 h-8 "
+                                src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502dee4b3091e5b5e55e29c_twirl-layered-splashes-5.svg"
+                                alt> </span> </p>
+
+                    <p style="font-family: Inter, sans-serif;"
+                        class="text-[#858585] text-[15px] sm:text-[21px] font-medium w-[80%] mt-5">Discover
+                        the art of cooking nutritious and mouthwatering
+                        dishes with me.</p>
+                    <div class="group flex">
+
+                        <a href="/recipe"
+                            class="mt-10 sm:w-[27vw]  md:w-[48vw] lg:w-[20vw] justify-center md:flex cursor-pointer rounded-md border-[2px] px-5 py-[12px] border-[#00693D] hover:bg-[#00693D] hover:text-white  duration-300 hover:ease-in-out transition-all">
+                            <div style="font-family: Inter, sans-serif; font-weight: 600;" class=" flex gap-3 ">
+                                All Recipes
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor"
+                                    class="w-6 h-6 ease-in-out hover:text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                </svg>
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <img class="flex-1 w-[25rem] h-[25rem] sm:w-[25rem] sm:h-[25rem] rounded-full md:w-[25rem]  md:h-[25rem] lg:w-[30rem] lg:h-[30rem]"
+                src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6501d65c4ca71937e4aa4956_main-p-800.jpg"
+                alt>
+
+        </div>
+
+        <hr>
+
+        <div class="flex flex-col justify-center items-center mb-10">
+            <div style="font-family: Inter, sans-serif;"
+                class="features flex justify-center items-center text-[16px] font-medium text-[#00693D]  mt-20">
+                <svg class="w-2 h-2 mr-2" fill="#00693D" id="Layer_1" style="enable-background:new 0 0 512 512;"
+                    version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g>
+                        <g>
+                            <path
+                                d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M256,446.7    c-105.1,0-190.7-85.5-190.7-190.7c0-105.1,85.5-190.7,190.7-190.7c105.1,0,190.7,85.5,190.7,190.7    C446.7,361.1,361.1,446.7,256,446.7z" />
+                        </g>
+                    </g>
+                </svg>
+                Browse By Category
+
+            </div>
+            <div class="category flex">
+                <p style="font-family: Inter, sans-serif; "
+                    class="md:text-[50px] text-[30px] ml-[2rem] flex font-semibold ">Recipes
+                    <span class="text-[#00693D] flex mx-[6px]">Category <img class="w-8 h-8"
+                            src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502dee4b3091e5b5e55e29c_twirl-layered-splashes-5.svg"
+                            alt> </span>
+                </p>
+            </div>
+            <form action={{ url_for('home') }} method="POST">
+                <div class="mt-5 gap-5 grid sm:grid-cols-4 sm:gap-[7rem] ">
+                    <button type="submit" name="category" value="seafood"
+                        class="flex duration-300 ease-in-out hover:scale-110 hover:bg-pink-100 hover:text-pink-700 flex-col justify-center items-center p-10  w-[190px] h-[190px] bg-[#E8FCF1] rounded-full">
+                        <img class=" w-8 h-8 "
+                            src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c089/6502e2d1ff8db94df5297188_icons8-bread-240.png"
+                            alt>
+                        <span style="font-family: Inter, sans-serif;  ">Seafood</span>
+                    </button>
+                    <button type="submit" name="category" value="Vegetarian"
+                        class="flex duration-300 ease-in-out hover:scale-110 hover:bg-pink-100 hover:text-pink-700 flex-col justify-center items-center p-10  w-[190px] h-[190px] bg-[#E8FCF1] rounded-full">
+                        <img class=" w-8 h-8 "
+                            src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c089/6502e2d1ff8db94df5297188_icons8-bread-240.png"
+                            alt>
+                        <span style="font-family: Inter, sans-serif;  ">Vegetarian</span>
+                    </button>
+                    <button type="submit" name="category" value="Pasta"
+                        class="flex duration-300 ease-in-out hover:scale-110 hover:bg-pink-100 hover:text-pink-700 flex-col justify-center items-center p-10  w-[190px] h-[190px] bg-[#E8FCF1] rounded-full">
+                        <img class=" w-8 h-8 "
+                            src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c089/6502e2d1ff8db94df5297188_icons8-bread-240.png"
+                            alt>
+                        <span style="font-family: Inter, sans-serif;  ">Pasta</span>
+                    </button>
+                    <button type="submit" name="category" value="Dessert"
+                        class="flex duration-300 ease-in-out hover:scale-110 hover:bg-pink-100 hover:text-pink-700 flex-col justify-center items-center p-10  w-[190px] h-[190px] bg-[#E8FCF1] rounded-full">
+                        <img class=" w-8 h-8 "
+                            src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c089/6502e2d1ff8db94df5297188_icons8-bread-240.png"
+                            alt>
+                        <span style="font-family: Inter, sans-serif;  ">Dessert</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="bg-[#EEFFF6] px-3  sm:px-6 py-6 ">
+        <div class="category flex">
+            <p style="font-family: Inter, sans-serif; " class="md:text-[50px] text-[30px]  flex font-semibold ">Latest
+                <span class="text-[#00693D] flex mx-[6px]">Recipes <img class="w-8 h-8"
+                        src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502dee4b3091e5b5e55e29c_twirl-layered-splashes-5.svg"
+                        alt> </span>
+            </p>
+        </div>
+
+        <div class="button md:flex  md:items-center mt-5">
+
+            <div class="btn flex flex-col md:flex-row w-fit ">
+                <button type="button"
+                    class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-[#00693D] dark:hover:bg-green-700 dark:focus:ring-green-800">Latest
+                    Recipes</button>
+            </div>
+            <div class="btn1">
+
+                <button type="button"
+                    class="flex gap-3 text-black  bg-white focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-white ">
+                    <img class src="static/featured.svg " alt>
+                    Featured Recipes</button>
+            </div>
+        </div>
+
+        <div class="grid mt-10 gap-5 mb-20  sm:grid-cols-2 md:grid-cols-3">
+
+            {% for item in item_data %}
+
+            <div class="max-w-sm group bg-white border overflow-hidden border-gray-200 rounded-lg shadow ">
+                <a class="flex justify-end" href="#">
+                    <button type="button"
+                        class="flex absolute hover:scale-110 duration-300 ease-in-out text-[#00693d] z-50 mt-4 max-w-sm justify-end gap-3   bg-white focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-white ">
+                        {{item.category}} </button>
+                    <img class="rounded-t-lg  w-[100vw] h-[200px] object-cover duration-300 ease-in-out group-hover:scale-105 transition-transform  "
+                        src="{{item.image}}" alt />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5
+                            class="mb-2 hover:text-gray-700 text-2xl font-semibold tracking-tight text-gray-900 dark:text-black">
+                            {{item.name}}
+
+                        </h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here
+                        are one of the most popular and updated recipes you
+                        will get..!</p>
+
+                    <a href="{{ url_for('recipe_detail', food_name=item['name']) }}>
+                            <p style=" text-underline-offset: 12px;"
+                        class="text-[#00693D] font-semibold   flex flex-col underline">View
+                        Recipe
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+
+    <div id="about" class="about_me flex md:flex md:flex-row flex-col-reverse justify-between   px-3  sm:px-6 py-6 ">
+        <div class="flex ">
+            <div class="text flex flex-col">
+                <div style="font-family: Inter, sans-serif;"
+                    class=" flex items-center text-[16px] font-medium text-[#00693D]  mt-20">
+                    <svg class="w-2 h-2 mr-2" fill="#00693D" id="Layer_1" style="enable-background:new 0 0 512 512;"
+                        version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g>
+                            <g>
+                                <path
+                                    d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M256,446.7    c-105.1,0-190.7-85.5-190.7-190.7c0-105.1,85.5-190.7,190.7-190.7c105.1,0,190.7,85.5,190.7,190.7    C446.7,361.1,361.1,446.7,256,446.7z" />
+                            </g>
+                        </g>
+                    </svg>
+                    About Me
+
+                </div>
+                <div>
+
+                    <p style="font-family: Inter, sans-serif;" class="font-semibold  md:text-[45px] text-[22px]">
+                        I am a Web Developer and <span class="text-[#00693D] flex">Chef Who Loves To
+                            Cook.<img class="w-8 h-8 flex"
+                                src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502dee4b3091e5b5e55e29c_twirl-layered-splashes-5.svg"
+                                alt> </span> </p>
+
+                    <div class="group flex">
+
+                        <a href="/contact"
+                            class="mt-10 sm:w-[27vw]  md:w-[48vw] lg:w-[20vw] justify-center md:flex cursor-pointer rounded-md border-[2px] px-5 py-[12px] border-[#00693D] hover:bg-[#00693D] hover:text-white  duration-300 hover:ease-in-out transition-all">
+                            <div style="font-family: Inter, sans-serif; font-weight: 600;" class=" flex gap-3 ">
+                                Contact Me
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor"
+                                    class="w-6 h-6 ease-in-out hover:text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                </svg>
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="myimage md:w-[21rem] w-[91vw]  ">
+            <img class="rounded-lg md:h-[411px]" src="static/me.jpeg" alt>
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+</body>
+
+</html>

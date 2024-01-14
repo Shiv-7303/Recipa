@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<!-- bg-[#00693D] -->
+<!-- style="font-family: Inter, sans-serif;" -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{url_for('static',filename='css/output.css')}}" rel="stylesheet">
+
+    <title>Recipa-Recipes</title>
+</head>
+<style></style>
+
+<body>
+
+    <div class="page px-3  sm:px-6 py-6 ">
+        {% include 'navbar.html' %}
+
+
+    </div>
+
+    <div class="back flex px-3  sm:px-6 py-6">
+        <a href="{{url_for('recipe')}}">
+            <p style="text-underline-offset: 12px;" class="text-[#00693D] font-semibold   flex flex-col underline">Back
+            </p>
+        </a>
+    </div>
+
+    <img class="absolute md:w-[90px] w-[78px] duration-150 group-hover:skew-x-12 group-hover:rotate-12 sm:translate-y-[35.5rem] sm:translate-x-[5.5rem] translate-y-[25.5rem] translate-x-[1.5rem]"
+        src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502d44bdd3676099ceae02f_carrot-p-500.png"
+        alt>
+
+    <img class="absolute w-[78px] duration-150 group-hover:skew-x-12 group-hover:rotate-12 sm:translate-y-[3.5rem] sm:translate-x-[66.5rem] translate-y-[4.5rem] translate-x-[13.5rem]"
+        src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502d400ab92f76e0bf8af7d_brocoli.png" alt>
+    {% for food in detail %}
+
+    <div class="category flex-col  px-3  sm:px-6 py-6 ">
+        <p style="font-family: Inter, sans-serif; " class="md:text-[50px] text-[30px]  flex font-semibold ">Latest
+            <span class="text-[#00693D] flex mx-[6px]">Recipes <img class="w-8 h-8"
+                    src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502dee4b3091e5b5e55e29c_twirl-layered-splashes-5.svg"
+                    alt> </span>
+        </p>
+        <div
+            class=" hidden shadow-md w-fit mx-auto sm:flex justify-center mt-5 mb-5 rounded-lg border-[1px] border-gray-400">
+
+            <div class="flex justify-between items-center max-w-screen">
+                <div class="image flex h-[444px]">
+                    <img class="rounded-lg" src="{{food.image}}" alt>
+                </div>
+
+                <div class="flex-col h-[300px] px-[150px] py-[80px] justify-evenly items-center">
+                    <p style="font-family: Inter, sans-serif;" class="text-[34px] mb-4 font-bold"> {{food.name}}
+                    </p>
+                    <p style="font-family: Inter, sans-serif;" class="text-[14px] font-semibold">Tags :
+                        {{food.tags}} </p>
+
+                    <a href="#detail"
+                        class="mt-10 w-auto flex justify-center md:flex cursor-pointer rounded-md border-[2px] px-5 py-[12px] border-[#00693D] hover:bg-[#00693D] hover:text-white  duration-300 hover:ease-in-out transition-all">
+                        <div style="font-family: Inter, sans-serif; font-weight: 600;" class=" flex gap-3 ">
+                            View More
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 ease-in-out hover:text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                            </svg>
+
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <div class="max-w-sm group sm:hidden  bg-white border overflow-hidden border-gray-200 rounded-lg shadow ">
+            <a class="flex justify-end" href="#">
+                <button type="button"
+                    class="flex absolute hover:scale-110 duration-300 ease-in-out text-[#00693d] z-50 mt-4 max-w-sm justify-end gap-3   bg-white focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-white ">
+                    {{food.category}} </button>
+                <img class="rounded-t-lg  w-[100vw] h-[200px] object-cover duration-300 ease-in-out group-hover:scale-105 transition-transform  "
+                    src="{{food.image}}" alt />
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5
+                        class="mb-2 hover:text-gray-700 text-2xl font-semibold tracking-tight text-gray-900 dark:text-black">
+                        {{food.name}}
+
+                    </h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Tags
+                    : {{food.tags}}</p>
+
+                <a href="{{ url_for('recipe_detail', food_name=food['name']) }}>
+                    <p style=" text-underline-offset: 12px;"
+                    class="text-[#00693D] font-semibold   flex flex-col underline">View
+                    Recipe
+                    </p>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+    <div id="detail" class="detail mt-10  px-3 mx-auto sm:px-6 py-6">
+        <div class="ingredients">
+            <p style="font-family: Inter, sans-serif; " class="md:text-[50px] text-[22px]  flex font-semibold ">
+                <span class="text-[#00693D] flex mx-[6px]">Ingredients <img class="w-8 h-8"
+                        src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502dee4b3091e5b5e55e29c_twirl-layered-splashes-5.svg"
+                        alt> </span>
+            </p>
+
+        </div>
+        <div class=" px-3 mt-2">
+            {% for food in ingredient %}
+            <ol class="max-w-md space-y-2 text-gray-500 dark:text-gray-400">
+                <li>
+                    <span style="font-family: Inter, sans-serif; "
+                        class="font-medium text-[20px] text-gray-900 dark:text-black">{{loop.index}}.
+                        {{food}} </span>
+                </li>
+            </ol>
+
+            {% endfor %}
+        </div>
+        <div class="measures mt-4">
+            <p style="font-family: Inter, sans-serif; " class="md:text-[50px] text-[22px]  flex font-semibold ">
+                <span class="text-[#00693D] flex mx-[6px]">Measures <img class="w-8 h-8"
+                        src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502dee4b3091e5b5e55e29c_twirl-layered-splashes-5.svg"
+                        alt> </span>
+            </p>
+
+        </div>
+        <div class=" px-3 mt-2">
+            {% for food in measures %}
+            <ol class="max-w-md space-y-2 text-gray-500 dark:text-gray-400">
+                <li>
+                    <span style="font-family: Inter, sans-serif; "
+                        class="font-medium text-[20px] text-gray-900 dark:text-black">{{loop.index}}.
+                        {{food}} </span>
+                </li>
+            </ol>
+
+            {% endfor %}
+        </div>
+        <div class="detail mt-10 ">
+            <div class="preparation">
+                <p style="font-family: Inter, sans-serif; " class="md:text-[50px] text-[22px]  flex font-semibold ">
+                    <span class="text-[#00693D] flex mx-[6px]">Preparation <img class="w-8 h-8"
+                            src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502dee4b3091e5b5e55e29c_twirl-layered-splashes-5.svg"
+                            alt> </span>
+                </p>
+
+            </div>
+
+            <div class="px-3  w-[24rem] md:w-full">
+                {% for food in detail %}
+                <p style="font-family: Inter, sans-serif; "
+                    class="font-medium text-[20px] text-gray-900 dark:text-black text-justify">
+                    {{food.ins}}
+
+                </p>
+
+                {% endfor %}
+            </div>
+        </div>
+
+
+        <div class="detail mt-10 ">
+            <div class="Youtube">
+                <p style="font-family: Inter, sans-serif; " class="md:text-[50px] text-[22px]  flex font-semibold ">
+                    Youtube Link
+                    <span class="text-[#00693D] flex mx-[6px]"> For More<img class="w-8 h-8"
+                            src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502dee4b3091e5b5e55e29c_twirl-layered-splashes-5.svg"
+                            alt> </span>
+                </p>
+
+            </div>
+
+            <div class="px-3  w-[24rem] md:w-full">
+                {% for food in detail %}
+                <a target="_blank" href=" {{food.Youtube}} " style="font-family: Inter, sans-serif; "
+                    class="font-medium text-[20px] text-blue-500 dark:text-blue-500 text-justify">
+                    {% if food["Youtube"] != "" %}
+                    <span class="font-medium text-[20px] text-gray-900 dark:text-black text-justify">Youtube
+                        :</span></span> {{food.Youtube}}
+
+                    {% else %}
+                    Link is Not Available
+                    {% endif %}
+
+                </a>
+
+                {% endfor %}
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</body>
+
+</html>

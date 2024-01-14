@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<!-- bg-[#00693D] -->
+<!-- style="font-family: Inter, sans-serif;" -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{url_for('static',filename='css/output.css')}}" rel="stylesheet">
+
+    <title>Recipa-Category</title>
+</head>
+<style></style>
+
+<body>
+
+    <div class="page px-3  sm:px-6 py-6 ">
+        {% include 'navbar.html' %}
+
+    </div>
+
+    <div class="bg-[#EEFFF6] px-3  sm:px-6 py-6 ">
+        <div class="category flex flex-col sm:flex-row sm:justify-between sm:items-center ">
+            <p style="font-family: Inter, sans-serif; " class="md:text-[50px] text-[30px]  flex font-semibold ">All
+                <span class="text-[#00693D] flex mx-[6px]">Recipes <img class="w-8 h-8"
+                        src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502dee4b3091e5b5e55e29c_twirl-layered-splashes-5.svg"
+                        alt> </span>
+            </p>
+
+        </div>
+        <div class="grid mt-10 gap-5 mb-20  sm:grid-cols-2 md:grid-cols-3">
+
+            {% for food in items %}
+
+            <div class="max-w-sm group  bg-white border overflow-hidden border-gray-200 rounded-lg shadow ">
+                <a class="flex justify-end" href="#">
+                    <button type="button"
+                        class="flex absolute hover:scale-110 duration-300 ease-in-out text-[#00693d] z-1 mt-4 max-w-sm justify-end gap-3   bg-white focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-white ">
+                        {{food.category}} </button>
+                    <img class="rounded-t-lg  w-[100vw] h-[200px] object-cover duration-300 ease-in-out group-hover:scale-105 transition-transform  "
+                        src="{{food.image}}" alt />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5
+                            class="mb-2 hover:text-gray-700 text-2xl font-semibold tracking-tight text-gray-900 dark:text-black">
+                            {{food.name}}
+
+                        </h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Tags
+                        : {{food.tags}}</p>
+
+                    <a href="{{ url_for('recipe_detail', food_name=food['name']) }}">
+                        <p style="text-underline-offset: 12px;"
+                            class="text-[#00693D] font-semibold   flex flex-col underline">View
+                            Recipe
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+
+    </div>
+
+    </div>
+
+    <!-- about -->
+
+    <div id="about" class="about_me flex md:flex md:flex-row flex-col-reverse justify-between   px-3  sm:px-6 py-6 ">
+        <div class="flex ">
+            <div class="text flex flex-col">
+                <div style="font-family: Inter, sans-serif;"
+                    class=" flex items-center text-[16px] font-medium text-[#00693D]  mt-20">
+                    <svg class="w-2 h-2 mr-2" fill="#00693D" id="Layer_1" style="enable-background:new 0 0 512 512;"
+                        version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g>
+                            <g>
+                                <path
+                                    d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M256,446.7    c-105.1,0-190.7-85.5-190.7-190.7c0-105.1,85.5-190.7,190.7-190.7c105.1,0,190.7,85.5,190.7,190.7    C446.7,361.1,361.1,446.7,256,446.7z" />
+                            </g>
+                        </g>
+                    </svg>
+                    About Me
+
+                </div>
+                <div>
+
+                    <p style="font-family: Inter, sans-serif;" class="font-semibold  md:text-[45px] text-[22px]">
+                        I am a Web Developer and <span class="text-[#00693D] flex">Chef Who Loves
+                            To
+                            Cook.<img class="w-8 h-8 flex"
+                                src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502dee4b3091e5b5e55e29c_twirl-layered-splashes-5.svg"
+                                alt> </span> </p>
+
+                    <div class="group flex">
+
+                        <a href="/contact"
+                            class="mt-10 sm:w-[27vw]  md:w-[48vw] lg:w-[20vw] justify-center md:flex cursor-pointer rounded-md border-[2px] px-5 py-[12px] border-[#00693D] hover:bg-[#00693D] hover:text-white  duration-300 hover:ease-in-out transition-all">
+                            <div style="font-family: Inter, sans-serif; font-weight: 600;" class=" flex gap-3 ">
+                                Contact Me
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor"
+                                    class="w-6 h-6 ease-in-out hover:text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                </svg>
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="myimage md:w-[21rem] w-[91vw]  ">
+            <img class="rounded-lg md:h-[411px]" src="{{ url_for('static', filename='me.jpeg') }}" alt>
+        </div>
+    </div>
+    <!-- about end-->
+    {% include 'footer.html' %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var dropdownButton = document.getElementById('dropdownDefaultButton');
+            var dropdownMenu = document.getElementById('dropdown');
+
+            // Toggle dropdown visibility
+            dropdownButton.addEventListener('click', function () {
+                dropdownMenu.classList.toggle('hidden');
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function (event) {
+                var isClickInsideDropdown = dropdownButton.contains(event.target) || dropdownMenu.contains(event.target);
+
+                if (!isClickInsideDropdown) {
+                    dropdownMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
