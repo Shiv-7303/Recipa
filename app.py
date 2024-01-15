@@ -2,7 +2,6 @@ import math
 import os
 from flask import Flask, render_template, request, redirect, url_for,flash
 import requests
-import random
 from flask_mail import Mail, Message
 
 app = Flask(__name__)
@@ -151,14 +150,6 @@ def category(name):
         items.append({"name":meal["strMeal"], "image":meal["strMealThumb"], })
     print(items)
     return render_template('category_detail.html', items = items)
-    
-    
-    
-    
-    
-    
-    
-    
     
 if __name__ == '__main__':
     app.run(debug=True)
