@@ -13,7 +13,7 @@ app.config["MAIL_SERVER"] = "smtp.gmail.com"
 app.config["MAIL_PORT"] = 587
 app.config["MAIL_USE_TLS"] = True
 app.config["MAIL_PASSWORD"] = os.environ.get("PYTHON_EMAIL_PASSWORD")
-app.config["MAIL_USERNAME"] = "pythontut23@gmail.com"
+app.config["MAIL_USERNAME"] = os.environ.get("PYTHON_EMAIL")
 # Initialize the Flask Mail
 mail = Mail(app)
 mail.init_app(app)
@@ -47,14 +47,14 @@ def contact():
         msg = Message(
             subject="New Message from Recipa",
             sender=email,
-            recipients=["pythontut23@gmail.com"],
+            recipients=[os.environ.get("PYTHON_EMAIL")],
             body=f"Message from Recipa\n From: {name}\nEmail: {email} Message: {message}",
         )
         try:
             mail.send(msg)
             flash("Message Sent..!", "success")
-        except:
-            flash("Something Error..!", "error")
+        except Exception as e:
+            flash(f"Something Error..! {e}", "error")
         return redirect(url_for("contact"))
     return render_template("contact_us.html")
 

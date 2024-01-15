@@ -34,9 +34,7 @@
 
             <div class="max-w-sm group  bg-white border overflow-hidden border-gray-200 rounded-lg shadow ">
                 <a class="flex justify-end" href="#">
-                    <button type="button"
-                        class="flex absolute hover:scale-110 duration-300 ease-in-out text-[#00693d] z-1 mt-4 max-w-sm justify-end gap-3   bg-white focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-white ">
-                        {{food.category}} </button>
+                    
                     <img class="rounded-t-lg  w-[100vw] h-[200px] object-cover duration-300 ease-in-out group-hover:scale-105 transition-transform  "
                         src="{{food.image}}" alt />
                 </a>
@@ -48,12 +46,10 @@
 
                         </h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Tags
-                        : {{food.tags}}</p>
 
                     <a href="{{ url_for('recipe_detail', food_name=food['name']) }}">
                         <p style="text-underline-offset: 12px;"
-                            class="text-[#00693D] font-semibold   flex flex-col underline">View
+                            class="text-[#00693D] font-semibold mb-4   flex flex-col underline">View
                             Recipe
                         </p>
                     </a>
@@ -143,6 +139,14 @@
                 }
             });
         });
+
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navbar-default');
+    
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+        });
+
     </script>
 </body>
 

@@ -1,6 +1,6 @@
-<nav class="navbar ">
+<nav class="navbar flex justify-between items-center ">
 
-    <div class="flex justify-between items-center">
+    <div class="flex w-[100vw] justify-between items-center">
         <a href="/" class="w-40">
             <img src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/650423e9b460bf9de873c114_logo-p-500.png"
                 alt>
@@ -19,46 +19,41 @@
                 Contact Us
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor"
-                    class="w-6 h-6 ease-in-out group-hover:transition-all group-hover:scale-110 group-hover:translate-x-[6px] group-hover:text-[#194130]">
+                    class="w-6 h-6 ease-in-out group-hover:transition-all group-hover:scale-110 group-hover:translate-x-[6px] group-hover:text-white">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                 </svg>
 
             </div>
         </a>
+       
+    </div>
 
-        <div id="menuToggle" data-collapse-toggle="navbar-default" type="button" class="md:hidden ">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    <div>
+        <div id="menuToggle" data-collapse-toggle="navbar-default" type="button" class="md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
-
-        </div>
-        <div class="hidden w-full sm:w-auto" id="navbar-default">
-            <ul
-                class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                <li>
-                    <a href="#"
-                        class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                        aria-current="page">Home</a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-                </li>
+          </div>
+        
+          <div class="nav-links absolute hidden w-full sm:w-auto" id="navbar-default">
+            <ul class="font-medium bg-[#eefff6] z-50 relative flex m-auto w-[22rem] translate-x-[-362px] sm:translate-x-[-508px]  mt-[2rem] flex-col p-4 md:p-0 sm:mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white  dark:border-gray-700">
+              <li>
+                <a href="/" class="block py-2 px-3 text-[#00693d] focus:text-white hover:bg-[#00693d]   rounded  md:p-0  " aria-current="page">Home</a>
+              </li>
+              <li>
+                <a href="#about" class="block py-2 px-3 text-[#00693d] focus:text-white hover:bg-[#00693d] rounded  md:border-0  md:p-0 ">About Me</a>
+              </li>
+              <li>
+                <a href="/recipe" class="block py-2 px-3  rounded md:border-0  md:p-0   text-[#00693d] focus:text-white hover:bg-[#00693d] ">Recipes</a>
+              </li>
+              <li>
+                <a href="/contact" class="block py-2 px-3  rounded md:border-0  md:p-0   text-[#00693d] focus:text-white hover:bg-[#00693d] ">Contact</a>
+              </li>
             </ul>
-        </div>
+          </div>
     </div>
 
 </nav>
+
+

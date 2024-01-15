@@ -90,12 +90,6 @@
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Tags
                     : {{food.tags}}</p>
 
-                <a href="{{ url_for('recipe_detail', food_name=food['name']) }}>
-                    <p style=" text-underline-offset: 12px;"
-                    class="text-[#00693D] font-semibold   flex flex-col underline">View
-                    Recipe
-                    </p>
-                </a>
             </div>
         </div>
 
@@ -201,6 +195,14 @@
 
 
     </div>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navbar-default');
+    
+        menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('hidden');
+        });
+      </script>
 </body>
 
 </html>
