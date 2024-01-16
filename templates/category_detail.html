@@ -140,13 +140,23 @@
             });
         });
 
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navbar-default');
-    
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('hidden');
-        });
-
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.getElementById('menuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+        
+            menuButton.addEventListener('click', function () {
+              mobileMenu.classList.toggle('hidden');
+            });
+        
+            document.addEventListener('click', function (event) {
+              const isClickOnMenuButton = menuButton.contains(event.target);
+              const isClickInsideMenu = mobileMenu.contains(event.target);
+        
+              if (!isClickOnMenuButton && !isClickInsideMenu) {
+                mobileMenu.classList.add('hidden');
+              }
+            });
+          });
     </script>
 </body>
 

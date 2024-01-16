@@ -21,10 +21,10 @@
     </div>
 
     <div class="back flex px-3  sm:px-6 py-6">
-        <a href="{{url_for('recipe')}}">
+        <button onclick="window.history.back()">
             <p style="text-underline-offset: 12px;" class="text-[#00693D] font-semibold   flex flex-col underline">Back
             </p>
-        </a>
+        </button>
     </div>
 
    
@@ -66,7 +66,7 @@
                 </div>
             </div>
         </div>
-        <div class="max-w-sm group sm:hidden  bg-white border overflow-hidden border-gray-200 rounded-lg shadow ">
+        <div class=" group sm:hidden  bg-white border overflow-hidden border-gray-200 rounded-lg shadow ">
             <a class="flex justify-end" href="#">
                 <button type="button"
                     class="flex absolute hover:scale-110 duration-300 ease-in-out text-[#00693d] z-50 mt-4 max-w-sm justify-end gap-3   bg-white focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-white ">
@@ -191,12 +191,23 @@
 
     </div>
     <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navbar-default');
-    
-        menuToggle.addEventListener('click', () => {
-          navLinks.classList.toggle('hidden');
-        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.getElementById('menuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+        
+            menuButton.addEventListener('click', function () {
+              mobileMenu.classList.toggle('hidden');
+            });
+        
+            document.addEventListener('click', function (event) {
+              const isClickOnMenuButton = menuButton.contains(event.target);
+              const isClickInsideMenu = mobileMenu.contains(event.target);
+        
+              if (!isClickOnMenuButton && !isClickInsideMenu) {
+                mobileMenu.classList.add('hidden');
+              }
+            });
+          });
       </script>
 </body>
 

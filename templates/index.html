@@ -152,7 +152,7 @@
     </div>
 
     <div class="bg-[#EEFFF6] px-3  sm:px-6 py-6 ">
-        <div class="category flex justify-between items-center">
+        <div class="category sm:flex  flex-col sm:justify-between sm:items-center">
             <p style="font-family: Inter, sans-serif; " class="md:text-[50px] text-[30px]  flex font-semibold ">Latest
                 <span class="text-[#00693D] flex mx-[6px]">Recipes <img class="w-8 h-8"
                         src="https://assets-global.website-files.com/6501c88eb0eaccde56b0c083/6502dee4b3091e5b5e55e29c_twirl-layered-splashes-5.svg"
@@ -201,7 +201,7 @@
 
             {% for item in item_data %}
 
-            <div class="max-w-sm group bg-white border overflow-hidden border-gray-200 rounded-lg shadow ">
+            <div class="group bg-white border overflow-hidden border-gray-200 rounded-lg shadow ">
                 <a class="flex justify-end" href="#">
                     <button type="button"
                         class="flex absolute hover:scale-110 duration-300 ease-in-out text-[#00693d] z-50 mt-4 max-w-sm justify-end gap-3   bg-white focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-white ">
@@ -296,16 +296,21 @@
             const menuButton = document.getElementById('menuButton');
             const mobileMenu = document.getElementById('mobileMenu');
         
-            menuButton.addEventListener('click', function () {
-              mobileMenu.classList.toggle('hidden');
-            });
+            let isMenuVisible = false;
+        
+            function toggleMenu() {
+              isMenuVisible = !isMenuVisible;
+              mobileMenu.classList.toggle('hidden', !isMenuVisible);
+            }
+        
+            menuButton.addEventListener('click', toggleMenu);
         
             document.addEventListener('click', function (event) {
               const isClickOnMenuButton = menuButton.contains(event.target);
               const isClickInsideMenu = mobileMenu.contains(event.target);
         
-              if (!isClickOnMenuButton && !isClickInsideMenu) {
-                mobileMenu.classList.add('hidden');
+              if (!isClickOnMenuButton && !isClickInsideMenu && isMenuVisible) {
+                toggleMenu();
               }
             });
           });
